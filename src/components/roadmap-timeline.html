@@ -1,0 +1,552 @@
+<section class="py-12 lg:py-24 relative z-10 font-sans overflow-visible">
+    <div class="wrapper px-4 md:px-6 lg:px-0">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
+
+            <div class="lg:col-span-5 lg:sticky lg:top-28 h-fit self-start z-30">
+
+               
+<div class="flex items-center gap-2 mb-6 overflow-x-auto no-scrollbar">
+    <button data-target="milestone-1" class="nav-pill active-pill">Agency</button>
+    <button data-target="milestone-2" class="nav-pill">HubSpot</button>
+    <button data-target="milestone-3" class="nav-pill">Git</button>
+    <button data-target="milestone-4" class="nav-pill">Future</button>
+</div>
+
+<style>
+    .nav-pill {
+        /* Base Styles (Size, Font, Shape) */
+        @apply px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-wider transition-all whitespace-nowrap rounded-full border cursor-pointer;
+        
+        /* Default Colors (Idle State) */
+        /* Light: Grey Text / Dark: Grey Text */
+        @apply text-slate-500 border-slate-200 dark:text-slate-400 dark:border-white/10 bg-transparent;
+    }
+
+    .nav-pill:hover {
+        /* === LIGHT MODE HOVER FIX === */
+        /* Text Dark (Black-ish) aur Background Light Grey taaki dikhe */
+        @apply text-slate-900 bg-slate-200 border-slate-300;
+
+        /* === DARK MODE HOVER === */
+        /* Text White aur Background Glassy */
+        @apply dark:text-white dark:bg-white/10 dark:border-white/20;
+    }
+
+    .active-pill {
+        /* Active State (Blue Highlight) */
+        /* Light: Blue Text / Dark: Light Blue Text */
+        @apply text-blue-600 bg-blue-50 border-blue-200 dark:text-blue-400 dark:bg-blue-500/10 dark:border-blue-500/30;
+    }
+</style>
+
+
+                <div class="bg-[#0f172a]/95 dark:bg-white/95 backdrop-blur-xl border border-white/10 dark:border-slate-200 rounded-2xl overflow-hidden">
+
+                    <div class="bg-white/5 dark:bg-slate-50 px-6 py-4 border-b border-white/10 dark:border-slate-200 flex items-center justify-between">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#ff5f56] border border-transparent dark:border-slate-300"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#ffbd2e] border border-transparent dark:border-slate-300"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#27c93f] border border-transparent dark:border-slate-300"></div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span id="terminal-status"
+                                class="font-mono text-[10px] text-blue-400 dark:text-blue-600 font-bold uppercase tracking-[0.2em]">Agency_Auth</span>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <div id="terminal-window" class="h-[450px] overflow-hidden relative font-mono">
+                        <div id="terminal-scroll-stack"
+                            class="flex flex-col transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)]">
+
+                            <div class="h-[450px] w-full p-6 md:p-8 flex flex-col justify-center shrink-0">
+                                <div class="space-y-6">
+                                    <div class="flex items-center gap-3 text-blue-400 dark:text-blue-600">
+                                        <i class="ri-verified-badge-line text-2xl"></i>
+                                        <span class="text-xs font-bold tracking-widest uppercase">Verified_Status</span>
+                                    </div>
+                                    <h3 class="text-4xl font-black text-white dark:text-slate-900 leading-tight">TOP RATED <span
+                                            class="text-blue-500 dark:text-blue-600">PLUS</span></h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="p-4 bg-white/5 dark:bg-slate-50 border border-white/10 dark:border-slate-200 rounded-xl">
+                                            <span class="block text-2xl font-bold text-white dark:text-slate-900">100%</span>
+                                            <span class="text-[10px] text-slate-400 dark:text-slate-500 uppercase">Success_Rate</span>
+                                        </div>
+                                        <div class="p-4 bg-white/5 dark:bg-slate-50 border border-white/10 dark:border-slate-200 rounded-xl">
+                                            <span class="block text-2xl font-bold text-white dark:text-slate-900">6.5k+</span>
+                                            <span class="text-[10px] text-slate-400 dark:text-slate-500 uppercase">Dev_Hours</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-4 bg-blue-600/10 dark:bg-blue-50 border border-blue-500/20 dark:border-blue-100 rounded-xl flex items-center justify-between">
+                                        <span class="text-xs text-blue-300 dark:text-blue-700">Jobs Delivered</span>
+                                        <span class="text-2xl font-black text-white dark:text-blue-900">98</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h-[450px] w-full p-6 md:p-8 flex flex-col justify-center shrink-0 bg-gradient-to-br from-orange-500/5 to-transparent dark:from-orange-500/5">
+                                <div class="space-y-6">
+                                    <div class="flex items-center gap-3 text-orange-500 dark:text-orange-600">
+                                        <i class="ri-hubot-line text-2xl"></i>
+                                        <span
+                                            class="text-xs font-bold tracking-widest uppercase">Marketplace_Core</span>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <span class="text-5xl font-black text-white dark:text-slate-900">1500+</span>
+                                        <span
+                                            class="block text-orange-500 dark:text-orange-600 text-xs font-bold uppercase">Active_Downloads</span>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center justify-between p-3 border-b border-white/5 dark:border-slate-200">
+                                            <span class="text-sm text-slate-400 dark:text-slate-500">HubSpot Themes</span>
+                                            <span class="text-white dark:text-slate-900 font-bold">07</span>
+                                        </div>
+                                        <div class="flex items-center justify-between p-3 border-b border-white/5 dark:border-slate-200">
+                                            <span class="text-sm text-slate-400 dark:text-slate-500">Custom Modules</span>
+                                            <span class="text-white dark:text-slate-900 font-bold">10+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h-[450px] w-full p-6 md:p-8 flex flex-col justify-center shrink-0">
+                                <div class="space-y-8">
+                                    <div class="flex items-center gap-3 text-green-500 dark:text-green-600">
+                                        <i class="ri-git-branch-line text-2xl"></i>
+                                        <span class="text-xs font-bold tracking-widest uppercase">Version_Control</span>
+                                    </div>
+                                    <div
+                                        class="relative p-6 bg-slate-900 dark:bg-slate-100 border border-white/5 dark:border-slate-300 rounded-2xl overflow-hidden">
+                                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                                            <i class="ri-github-fill text-6xl text-white dark:text-slate-900"></i>
+                                        </div>
+                                        <span class="text-4xl font-black text-white dark:text-slate-900">2,000+</span>
+                                        <span
+                                            class="block text-green-500 dark:text-green-600 text-[10px] font-bold uppercase mt-1">Total_Commits_Logged</span>
+                                        <div class="mt-6 flex gap-4">
+                                            <div><span class="block text-white dark:text-slate-900 font-bold">15+</span><span
+                                                    class="text-[9px] text-slate-500 dark:text-slate-500">REPOS</span></div>
+                                            <div><span class="block text-white dark:text-slate-900 font-bold">03</span><span
+                                                    class="text-[9px] text-slate-500 dark:text-slate-500">OPEN_TOOLS</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h-[450px] w-full p-6 md:p-8 flex flex-col justify-center shrink-0">
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3 text-purple-500 dark:text-purple-600 mb-2">
+                                        <i class="ri-rocket-2-line text-2xl"></i>
+                                        <span
+                                            class="text-xs font-bold tracking-widest uppercase">Next_Gen_Sprints</span>
+                                    </div>
+                                    <a href="#"
+                                        class="group flex items-center justify-between p-4 bg-white/5 dark:bg-slate-50 border border-white/10 dark:border-slate-200 rounded-xl hover:bg-purple-600/10 dark:hover:bg-purple-50 hover:border-purple-500/50 dark:hover:border-purple-300 transition-all">
+                                        <div>
+                                            <span class="block text-white dark:text-slate-900 font-bold text-sm">Advance Site Search</span>
+                                            <span class="text-[10px] text-slate-500 dark:text-slate-500 tracking-wider">HubSpot Enterprise
+                                                Solution</span>
+                                        </div>
+                                        <i
+                                            class="ri-external-link-line text-slate-500 dark:text-slate-400 group-hover:text-purple-500 dark:group-hover:text-purple-600 transition-colors"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="group flex items-center justify-between p-4 bg-white/5 dark:bg-slate-50 border border-white/10 dark:border-slate-200 rounded-xl hover:bg-purple-600/10 dark:hover:bg-purple-50 hover:border-purple-500/50 dark:hover:border-purple-300 transition-all">
+                                        <div>
+                                            <span class="block text-white dark:text-slate-900 font-bold text-sm">CSV to Email
+                                                Signature</span>
+                                            <span class="text-[10px] text-slate-500 dark:text-slate-500 tracking-wider">Internal
+                                                Productivity Tool</span>
+                                        </div>
+                                        <i
+                                            class="ri-link text-slate-500 dark:text-slate-400 group-hover:text-purple-500 dark:group-hover:text-purple-600 transition-colors"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-white/5 dark:bg-slate-50 p-4 flex items-center justify-between border-t border-white/10 dark:border-slate-200">
+                        <div class="flex items-center gap-4">
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-[8px] text-slate-500 dark:text-slate-500 uppercase font-mono tracking-tighter">Latency</span>
+                                <span class="text-[10px] text-green-500 dark:text-green-600 font-bold">24ms</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-[8px] text-slate-500 dark:text-slate-500 uppercase font-mono tracking-tighter">Status</span>
+                                <span class="text-[10px] text-blue-400 dark:text-blue-600 font-bold">Live_Sync</span>
+                            </div>
+                        </div>
+                        <i class="ri-shield-flash-line text-slate-700 dark:text-slate-300 text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:col-span-7 relative lg:pl-0 mt-8 lg:mt-0">
+
+                <div id="milestone-1" class="milestone-trigger group relative flex flex-col md:flex-row gap-8 md:gap-12 pb-20">
+
+                    <div class="relative flex flex-col items-center shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-white dark:bg-[#0b1120] border border-slate-200 dark:border-blue-500/30 flex items-center justify-center z-20 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(59,130,246,0.15)] dark:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                            <i class="ri-award-line text-blue-600 dark:text-blue-500 text-xl"></i>
+                        </div>
+
+                        <div class="absolute top-12 bottom-0 w-px bg-gradient-to-b from-blue-500/30 dark:from-blue-500/50 to-transparent opacity-40 dark:opacity-20">
+                        </div>
+                    </div>
+
+                    <div class="flex-1 space-y-6 pt-1">
+                        <div class="space-y-2">
+                            <span class="text-blue-600 dark:text-blue-500 font-mono text-[10px] font-bold tracking-[0.3em] block uppercase">
+                                ESTABLISHED_CREDIBILITY
+                            </span>
+                            <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase leading-tight">
+                                Elite Talent on <br><span class="text-blue-600 dark:text-blue-500">Upwork Global</span>
+                            </h3>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-xl font-medium">
+                            Being in the <strong>Top 3%</strong> means we handle high-stakes contracts where security and scalability
+                            are non-negotiable. Our 100% success rate is built on rigorous testing.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-sm">
+                                <i class="ri-flashlight-line text-blue-600 dark:text-blue-500 text-xs"></i>
+                                <span class="font-mono text-[9px] text-slate-600 dark:text-slate-400 uppercase font-bold">#Premium_Quality</span>
+                            </div>
+                            <div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-sm">
+                                <i class="ri-shield-user-line text-blue-600 dark:text-blue-500 text-xs"></i>
+                                <span class="font-mono text-[9px] text-slate-600 dark:text-slate-400 uppercase font-bold">#Enterprise_Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="milestone-2" class="milestone-trigger group relative flex flex-col md:flex-row gap-8 md:gap-12 pb-20">
+
+                    <div class="relative flex flex-col items-center shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-white dark:bg-[#0b1120] border border-slate-200 dark:border-orange-500/30 flex items-center justify-center z-20 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(249,115,22,0.15)] dark:shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+                            <i class="ri-shopping-bag-3-line text-orange-600 dark:text-orange-500 text-xl"></i>
+                        </div>
+                        <div class="absolute top-12 bottom-0 w-px bg-gradient-to-b from-orange-500/30 dark:from-orange-500/50 to-transparent opacity-40 dark:opacity-20"></div>
+                    </div>
+
+                    <div class="flex-1 space-y-6 pt-1">
+                        <div class="space-y-2">
+                            <span class="text-orange-600 dark:text-orange-500 font-mono text-[10px] font-bold tracking-[0.3em] block uppercase">
+                                ECOSYSTEM_CONTRIBUTOR
+                            </span>
+                            <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase leading-tight">
+                                HubSpot <span class="text-orange-600 dark:text-orange-500">Asset</span> <br>Engineering
+                            </h3>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-xl font-medium">
+                            Our marketplace assets are designed for high-conversion performance. With <strong>1500+ downloads</strong>, our themes pass HubSpot's strictest quality and speed audits.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-lg bg-orange-50 dark:bg-orange-500/5 border border-orange-200 dark:border-orange-500/10 flex items-start gap-4">
+                                <i class="ri-node-tree text-orange-600 dark:text-orange-500 mt-1"></i>
+                                <div>
+                                    <span class="text-xs font-bold text-orange-700 dark:text-orange-400 uppercase block mb-1">Architecture</span>
+                                    <p class="text-[10px] text-slate-600 dark:text-slate-500 font-mono italic">Modular & SEO-optimized structures.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-lg bg-slate-50 dark:bg-slate-500/5 border border-slate-200 dark:border-slate-500/10 flex items-start gap-4">
+                                <i class="ri-verified-badge-line text-slate-500 dark:text-slate-400 mt-1"></i>
+                                <div>
+                                    <span class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase block mb-1">Validation</span>
+                                    <p class="text-[10px] text-slate-600 dark:text-slate-500 font-mono italic">100% Technical compliance pass.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="milestone-3" class="milestone-trigger group relative flex flex-col md:flex-row gap-8 md:gap-12 pb-20">
+
+                    <div class="relative flex flex-col items-center shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-white dark:bg-[#0b1120] border border-slate-200 dark:border-green-500/30 flex items-center justify-center z-20 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(34,197,94,0.15)] dark:shadow-[0_0_20px_rgba(34,197,94,0.2)]">
+                            <i class="ri-terminal-window-line text-green-600 dark:text-green-500 text-xl"></i>
+                        </div>
+                        <div class="absolute top-12 bottom-0 w-px bg-gradient-to-b from-green-500/30 dark:from-green-500/50 to-transparent opacity-40 dark:opacity-20"></div>
+                    </div>
+
+                    <div class="flex-1 space-y-6 pt-1">
+                        <div class="space-y-2">
+                            <span class="text-green-600 dark:text-green-500 font-mono text-[10px] font-bold tracking-[0.3em] block uppercase">
+                                OPEN_SOURCE_CORE
+                            </span>
+                            <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase leading-tight">
+                                Technical <span class="text-green-600 dark:text-green-500">Debt</span> <br>Elimination
+                            </h3>
+                        </div>
+
+                        <div class="flex flex-wrap gap-6 border-b border-slate-200 dark:border-slate-800 pb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl font-black text-slate-900 dark:text-white">15+</span>
+                                <span class="text-[9px] text-slate-500 dark:text-slate-500 uppercase font-mono font-bold">Repositories</span>
+                            </div>
+                            <div class="w-px h-10 bg-slate-300 dark:bg-slate-800"></div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl font-black text-slate-900 dark:text-white">2k+</span>
+                                <span class="text-[9px] text-slate-500 dark:text-slate-500 uppercase font-mono font-bold">Commits</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 pt-2">
+                            <li class="flex items-center gap-4 text-xs text-slate-600 dark:text-slate-500 font-medium">
+                                <i class="ri-git-merge-line text-green-600 dark:text-green-500"></i>
+                                <span class="font-mono">CI/CD Pipelines for HubSpot Deployment</span>
+                            </li>
+                            <li class="flex items-center gap-4 text-xs text-slate-600 dark:text-slate-500 font-medium">
+                                <i class="ri-git-merge-line text-green-600 dark:text-green-500"></i>
+                                <span class="font-mono">Automated Object Schema Generator</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="milestone-4" class="milestone-trigger group relative flex flex-col md:flex-row gap-8 md:gap-12 ">
+                    
+                    <div class="relative flex flex-col items-center shrink-0">
+                    <div class="w-12 h-12 rounded-full bg-white dark:bg-[#0b1120] border border-slate-200 dark:border-purple-500/30 flex items-center justify-center z-20 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(168,85,247,0.15)] dark:shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+                        <i class="ri-rocket-line text-purple-600 dark:text-purple-500 text-xl"></i>
+                    </div>
+                    
+                    <div class="absolute top-12 bottom-0 w-px bg-gradient-to-b from-purple-500/30 dark:from-purple-500/50 to-transparent opacity-40 dark:opacity-20"></div>
+                </div>
+
+                    <div class="flex-1 space-y-8 pt-1">
+                    <div class="space-y-2">
+                        <span class="text-purple-600 dark:text-purple-500 font-mono text-[10px] font-bold tracking-[0.3em] block uppercase">
+                            FUTURE_PROTOCOLS
+                        </span>
+                        <h3 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase leading-tight">
+                            Scaling to <span class="text-purple-600 dark:text-purple-500">Product</span> <br>Centricity
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-5 pt-2">
+                        
+                        <div class="p-6 rounded-xl bg-purple-50 dark:bg-purple-600/5 border border-purple-200 dark:border-purple-500/20 flex items-start gap-5 transition-all hover:bg-purple-100 dark:hover:bg-purple-600/10">
+                            <i class="ri-search-eye-line text-2xl text-purple-600 dark:text-purple-500 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="text-slate-900 dark:text-white font-bold text-sm mb-1 uppercase tracking-wide">Neural HubSpot Search</h4>
+                                <p class="text-[11px] text-slate-600 dark:text-slate-500 leading-relaxed mb-3 font-medium">AI-powered relevancy layer for HubSpot CMS. Delivering sub-100ms enterprise search response times.</p>
+                                <a href="#" class="text-[10px] text-purple-700 dark:text-purple-400 font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">View_Live_Status <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-start gap-5">
+                            <i class="ri-mail-send-line text-2xl text-slate-500 dark:text-slate-400 shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="text-slate-900 dark:text-white font-bold text-sm mb-1 uppercase tracking-wide">CSV to Email Signature</h4>
+                                <p class="text-[11px] text-slate-600 dark:text-slate-500 leading-relaxed font-medium">Automated signature generation and deployment tool for large enterprise teams.</p>
+                            </div>
+                        </div>
+
+                       
+                        
+                    </div>
+
+
+                <div class="mt-24 pt-10 relative z-20 font-sans px-0 md:px-0">
+                    
+                    <div class="relative group w-full max-w-6xl mx-auto border-2 border-slate-300 dark:border-slate-800 bg-white dark:bg-[#0b1120] transition-all duration-300 shadow-[0_10px_40px_rgba(0,0,0,0.05)] dark:shadow-none">
+
+                        <div class="absolute -top-0.5 -left-0.5 w-6 h-6 border-t-4 border-l-4 border-blue-600 dark:border-blue-500 z-30"></div>
+                        <div class="absolute -top-0.5 -right-0.5 w-6 h-6 border-t-4 border-r-4 border-blue-600 dark:border-blue-500 z-30"></div>
+                        <div class="absolute -bottom-0.5 -left-0.5 w-6 h-6 border-b-4 border-l-4 border-blue-600 dark:border-blue-500 z-30"></div>
+                        <div class="absolute -bottom-0.5 -right-0.5 w-6 h-6 border-b-4 border-r-4 border-blue-600 dark:border-blue-500 z-30"></div>
+
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.05] dark:opacity-100 dark:[mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+                        <div class="absolute inset-0 flex items-center pointer-events-none select-none overflow-hidden opacity-[0.03] dark:opacity-[0.03]">
+                            <div class="animate-marquee whitespace-nowrap font-black text-[6rem] md:text-[8rem] leading-none text-black dark:text-white uppercase tracking-tighter">
+                                Scalability • Security • Performance • Architecture • Automation •
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 px-6 py-16 md:py-20 flex flex-col items-center text-center">
+                            
+                            <div class="mb-6 flex items-center gap-3 px-3 py-1 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+                                <span class="relative flex h-2 w-2">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-600 dark:bg-green-500"></span>
+                                </span>
+                                <span class="font-mono text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-widest">
+                                    System_Status: <span class="text-blue-700 dark:text-blue-400">Online</span>
+                                </span>
+                            </div>
+
+                            <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter mb-6 uppercase leading-tight">
+                                Engineer The <br>
+                                <span class="relative inline-block">
+                                    Impossible
+                                    <span class="absolute -bottom-1 left-0 right-0 h-1 bg-blue-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600"></span>
+                                </span>
+                            </h2>
+
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-medium max-w-lg mx-auto mb-10 leading-relaxed">
+                                Merge your vision with our architecture. From custom HubSpot logic to edge-computed SaaS platforms—we build what standard templates can't handle.
+                            </p>
+
+                            <a href="/contact" class="group/btn relative inline-flex items-center justify-center gap-4 px-8 py-4 bg-slate-900 dark:bg-white border-2 border-transparent dark:border-transparent overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                                
+                                <div class="absolute inset-0 bg-blue-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+                                
+                                <span class="relative font-mono font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs text-white dark:text-slate-900 group-hover/btn:text-white transition-colors z-10">
+                                    Initiate_Collab
+                                </span>
+                                
+                                <i class="ri-arrow-right-line relative text-white dark:text-slate-900 group-hover/btn:text-white group-hover/btn:translate-x-2 transition-all z-10"></i>
+                            </a>
+
+                            <div class="mt-12 flex items-center justify-center gap-8 opacity-60 dark:opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700">
+                                <i class="ri-hubspot-fill text-2xl hover:text-[#ff7a59] transition-colors"></i>
+                                <i class="ri-reactjs-fill text-2xl hover:text-[#61dafb] transition-colors"></i>
+                                <i class="ri-nodejs-fill text-2xl hover:text-[#339933] transition-colors"></i>
+                                <i class="ri-server-line text-2xl hover:text-blue-500 transition-colors"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                /* Smooth Marquee Animation */
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                    animation: marquee 40s linear infinite;
+                }
+                </style>
+
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollStack = document.getElementById('terminal-scroll-stack');
+        const milestones = document.querySelectorAll('.milestone-trigger');
+        const statusText = document.getElementById('terminal-status');
+        const navPills = document.querySelectorAll('.nav-pill');
+
+        const labels = ["Agency_Auth", "HubSpot_Market", "Git_History", "Future_Vision"];
+        let isMoving = false;
+
+        // --- LOGIC: SYNC TERMINAL FUNCTION ---
+        function syncTerminal(index) {
+            if (index < 0 || index >= labels.length) return;
+
+            isMoving = true;
+            const offset = index * 450; // Terminal height
+
+            // Terminal Motion
+            scrollStack.style.transform = `translateY(-${offset}px)`;
+
+            // UI Updates
+            statusText.innerText = labels[index];
+
+            // Pill Update
+            navPills.forEach((p, i) => {
+                i === index ? p.classList.add('active-pill') : p.classList.remove('active-pill');
+            });
+
+            // Lock release
+            setTimeout(() => { isMoving = false; }, 600);
+        }
+
+        // --- LOGIC: CLICK TO SCROLL ---
+        navPills.forEach((pill, index) => {
+            pill.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = pill.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    // Step 1: Terminal Update Karo (Visible on all screens)
+                    syncTerminal(index);
+
+                    // Step 2: CONDITIONAL SCROLL (Sirf Desktop pe scroll hoga)
+                    if (window.innerWidth >= 1024) { 
+                        const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 120;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                    // Mobile (<1024px) pe kuch nahi hoga, sirf terminal andar se slide karega (Step 1).
+                }
+            });
+        });
+
+        // --- LOGIC: INTERSECTION OBSERVER (ID based) ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !isMoving) {
+                    const id = entry.target.id;
+                    const index = Array.from(milestones).findIndex(m => m.id === id);
+
+                    if (index !== -1) {
+                        syncTerminal(index);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.4, 
+            rootMargin: "-10% 0px -40% 0px"
+        });
+
+        milestones.forEach(m => observer.observe(m));
+    });
+
+</script>
+<style>
+    .milestone-trigger {
+        /* Jab bhi anchor ya scroll-to trigger hoga, ye 150px niche rukega */
+        scroll-margin-top: 150px;
+    }
+
+    .terminal-state {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .state-exit {
+        opacity: 0 !important;
+        transform: translateY(-10px) scale(0.98);
+        filter: blur(4px);
+    }
+
+    .state-enter {
+        opacity: 1 !important;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+    .state-hidden {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+</style>

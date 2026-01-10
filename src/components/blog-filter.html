@@ -1,0 +1,146 @@
+<style>
+    .hide-scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<div class="sticky top-0 z-40 bg-white/90 dark:bg-[#0b1120]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="wrapper">
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between py-2 md:py-0 md:h-16 gap-2 md:gap-0">
+
+            <div class="w-full md:w-auto overflow-x-auto hide-scroll">
+                <nav class="flex items-center gap-2 min-w-max py-1">
+                    
+                    <span class="hidden md:block font-mono text-[10px] text-slate-400 uppercase tracking-widest mr-2">// Filter:</span>
+
+                    <button class="px-3 py-1.5 rounded text-[11px] md:text-sm font-bold uppercase tracking-wide text-white bg-slate-900 dark:bg-white dark:text-slate-900 shadow-sm">
+                        All
+                    </button>
+
+                    <button class="group px-3 py-1.5 rounded text-[11px] md:text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-2 border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+                        HubSpot
+                        <span class="font-mono text-[9px] md:text-[10px] text-slate-300 dark:text-slate-600 group-hover:text-slate-500">[12]</span>
+                    </button>
+
+                    <button class="group px-3 py-1.5 rounded text-[11px] md:text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-2 border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+                        DevOps
+                        <span class="font-mono text-[9px] md:text-[10px] text-slate-300 dark:text-slate-600 group-hover:text-slate-500">[08]</span>
+                    </button>
+
+                    <button class="group px-3 py-1.5 rounded text-[11px] md:text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-2 border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+                        Tutorials
+                        <span class="font-mono text-[9px] md:text-[10px] text-slate-300 dark:text-slate-600 group-hover:text-slate-500">[05]</span>
+                    </button>
+
+                </nav>
+            </div>
+
+            <div class="block md:hidden h-px w-full bg-slate-100 dark:bg-slate-800"></div>
+
+            <div class="w-full md:w-auto flex items-center justify-between md:justify-end gap-4">
+                
+                <span class="font-mono text-[10px] md:text-xs text-slate-400">
+                    25 Results
+                </span>
+
+                <div class="flex items-center gap-3">
+                    
+                    <div class="relative group">
+                        <select class="appearance-none bg-transparent pl-2 pr-5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer outline-none focus:ring-0 border-none text-right md:text-left">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                            <i class="ri-arrow-down-s-line text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div class="h-3 w-px bg-slate-200 dark:bg-slate-700"></div>
+
+                    <div class="flex items-center gap-1">
+                        <button class="p-1.5 rounded text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800" id="btn-view-grid">
+                            <i class="ri-layout-grid-line text-xs md:text-sm"></i>
+                        </button>
+                        <button class="p-1.5 rounded text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" id="btn-view-list">
+                            <i class="ri-list-check text-xs md:text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Elements Select Karo
+    const viewList = document.getElementById('view-list');
+    const viewGrid = document.getElementById('view-grid');
+    const btnList = document.getElementById('btn-view-list');
+    const btnGrid = document.getElementById('btn-view-grid');
+
+    // Agar elements page par nahi hain to return (Error rokne ke liye)
+    if (!viewList || !viewGrid || !btnList || !btnGrid) return;
+
+    // 2. Active Class Styles (Tailwind)
+    const activeClass = ['text-slate-900', 'dark:text-white', 'bg-slate-100', 'dark:bg-slate-800'];
+    const inactiveClass = ['text-slate-400', 'dark:text-slate-500', 'hover:text-slate-600', 'dark:hover:text-slate-300'];
+
+    // 3. Function to Switch View
+    function switchView(type) {
+        if (type === 'grid') {
+            // Show Grid, Hide List
+            viewList.classList.add('hidden');
+            viewGrid.classList.remove('hidden');
+
+            // Button Styling: Grid Active
+            btnGrid.classList.add(...activeClass);
+            btnGrid.classList.remove(...inactiveClass);
+            
+            // List Inactive
+            btnList.classList.remove(...activeClass);
+            btnList.classList.add(...inactiveClass);
+
+            // Save Preference
+            localStorage.setItem('blogView', 'grid');
+        } else {
+            // Show List, Hide Grid
+            viewGrid.classList.add('hidden');
+            viewList.classList.remove('hidden');
+
+            // Button Styling: List Active
+            btnList.classList.add(...activeClass);
+            btnList.classList.remove(...inactiveClass);
+
+            // Grid Inactive
+            btnGrid.classList.remove(...activeClass);
+            btnGrid.classList.add(...inactiveClass);
+
+            // Save Preference
+            localStorage.setItem('blogView', 'list');
+        }
+    }
+
+    // 4. Event Listeners Lagao
+    btnGrid.addEventListener('click', () => switchView('grid'));
+    btnList.addEventListener('click', () => switchView('list'));
+
+    // 5. Check LocalStorage on Load (User ki purani choice yaad rakhne ke liye)
+    const savedView = localStorage.getItem('blogView');
+    if (savedView === 'grid') {
+        switchView('grid');
+    } else {
+        switchView('list'); // Default
+    }
+});
+</script>

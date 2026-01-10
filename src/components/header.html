@@ -1,0 +1,532 @@
+<header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-500 border-b border-transparent py-4"
+    role="banner">
+    <div class="wrapper relative">
+        <div class="flex justify-between items-center">
+
+            <div class="flex-shrink-0 z-50 logo-group">
+                <a href="/" class="flex items-center gap-2" aria-label="2Cube Studio Home">
+                    <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
+                        2CUBE<span class="logo-dot">.</span>
+                    </span>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center p-1.5 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg rounded-full border border-slate-200/60 dark:border-slate-700/60 shadow-sm"
+                aria-label="Main Navigation">
+
+                <div class="group relative">
+                    <button class="nav-item-btn group" aria-expanded="false">
+                        Products
+                        <i class="ri-arrow-down-s-line nav-arrow" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="mega-menu-wrapper w-[900px] -left-64" role="region" aria-label="Products Submenu">
+                        <div class="menu-tip" style="left: 310px;"></div>
+
+                        <div class="mega-menu-card flex overflow-hidden min-h-[420px]">
+                            <div
+                                class="w-[28%] bg-slate-50/80 dark:bg-slate-900/50 p-3 border-r border-slate-100 dark:border-slate-700/50 flex flex-col gap-1">
+                                <h3
+                                    class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4 mb-2 mt-2">
+                                    Marketplace</h3>
+                                <div class="tab-btn active-tab" role="button" data-target="tab-themes" tabindex="0"><i
+                                        class="ri-layout-masonry-line tab-icon"></i> <span>Premium Themes</span></div>
+                                <div class="tab-btn" role="button" data-target="tab-modules" tabindex="0"><i
+                                        class="ri-function-line tab-icon"></i> <span>Smart Modules</span></div>
+                                <div class="h-px bg-slate-200 dark:bg-slate-800 my-2 mx-4"></div>
+                                <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4 mb-2">Dev
+                                    Resources</h3>
+                                <div class="tab-btn" role="button" data-target="tab-git" tabindex="0"><i
+                                        class="ri-terminal-box-line tab-icon"></i> <span>Open Source</span></div>
+                                <div class="tab-btn" role="button" data-target="tab-tools" tabindex="0"><i
+                                        class="ri-tools-line tab-icon"></i> <span>Developer Tools</span></div>
+                            </div>
+
+                            <div class="w-[72%] p-6 bg-white dark:bg-[#0b1120] relative">
+                                <div class="bg-grid-pattern"></div>
+
+                                <div id="tab-themes" class="tab-content active-content">
+                                    <div class="flex justify-between items-end mb-6">
+                                        <div>
+                                            <h4 class="text-xl font-bold text-slate-900 dark:text-white">HubSpot Themes
+                                            </h4>
+                                            <p class="text-sm text-slate-500">Built for speed, SEO, and easy editing.
+                                            </p>
+                                        </div>
+                                        <a href="/marketplace"
+                                            class="text-xs font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">View
+                                            Marketplace <i class="ri-arrow-right-line"></i></a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <a href="#" class="spotlight-card block p-4 group/card">
+                                            <div
+                                                class="aspect-video bg-gradient-to-tr from-orange-100 to-rose-100 dark:from-slate-800 dark:to-slate-700 rounded-lg mb-3 overflow-hidden relative">
+                                                <img src="./b-3.webp" width="250" height="140"
+                                                    class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
+                                                    alt="Theme">
+                                            </div>
+                                            <h5 class="font-bold text-slate-900 dark:text-white">Agency Growth V3</h5>
+                                            <p class="text-xs text-slate-500 mt-1">Best-selling B2B theme.</p>
+                                        </a>
+                                        <a href="#" class="spotlight-card block p-4 group/card">
+                                            <div
+                                                class="aspect-video bg-gradient-to-tr from-blue-100 to-cyan-100 dark:from-slate-800 dark:to-slate-700 rounded-lg mb-3 overflow-hidden relative">
+                                                <img src="./b-4.webp" width="250" height="140"
+                                                    class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
+                                                    alt="Theme">
+                                            </div>
+                                            <h5 class="font-bold text-slate-900 dark:text-white">SaaS Pro Starter</h5>
+                                            <p class="text-xs text-slate-500 mt-1">Dark-mode ready.</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div id="tab-modules" class="tab-content">
+                                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Functional Modules
+                                    </h4>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div
+                                            class="p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer animate-item delay-100">
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-3">
+                                                <i class="ri-calculator-fill"></i>
+                                            </div>
+                                            <h5 class="font-bold text-sm dark:text-white">ROI Calculator</h5>
+                                            <p class="text-xs text-slate-500 mt-1">Lead gen magnet.</p>
+                                        </div>
+                                        <div
+                                            class="p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer animate-item delay-200">
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-3">
+                                                <i class="ri-chat-quote-fill"></i>
+                                            </div>
+                                            <h5 class="font-bold text-sm dark:text-white">Testimonials</h5>
+                                            <p class="text-xs text-slate-500 mt-1">Video support.</p>
+                                        </div>
+                                        <div
+                                            class="p-4 rounded-xl border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer animate-item delay-300">
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-3">
+                                                <i class="ri-map-pin-user-fill"></i>
+                                            </div>
+                                            <h5 class="font-bold text-sm dark:text-white">Event Map</h5>
+                                            <p class="text-xs text-slate-500 mt-1">Dynamic filtering.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-git" class="tab-content">
+                                    <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Open Source</h4>
+                                    <div class="grid grid-cols-12 gap-6">
+                                        <div class="col-span-5 space-y-3 pt-2">
+                                            <p class="text-sm text-slate-500 mb-4">We contribute to the HubSpot
+                                                developer community.</p>
+                                            <a href="/opensource"
+                                                class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary transition-all group/git">
+                                                <i
+                                                    class="ri-github-fill text-2xl group-hover/git:text-primary transition-colors"></i>
+                                                <div>
+                                                    <div
+                                                        class="font-mono text-xs font-bold text-slate-700 dark:text-slate-200">
+                                                        2cube/hubspot-react</div>
+                                                    <div class="text-[10px] text-slate-400">2.4k Stars</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-span-7">
+                                            <div class="terminal-window h-full">
+                                                <div class="flex gap-1.5 mb-4 opacity-50">
+                                                    <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                                                    <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                                                </div>
+                                                <div class="code-line"><span class="line-num">1</span><span
+                                                        class="text-pink-400">npm</span> install @2cube/theme</div>
+                                                <div class="code-line"><span class="line-num">2</span><span
+                                                        class="text-green-400">Success!</span> Ready.</div>
+                                                <div class="code-line"><span class="line-num">3</span><span>$ <span
+                                                            class="cursor"></span></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-tools" class="tab-content">
+                                    <div class="grid grid-cols-3 gap-4">
+                                        <a href="#"
+                                            class="group/tool p-4 border border-slate-200 dark:border-slate-700 rounded-xl hover:shadow-md transition-all text-center">
+                                            <i class="ri-braces-line text-2xl text-primary mb-2 block"></i>
+                                            <h5 class="font-bold text-sm dark:text-white">HubL Linter</h5>
+                                            <p class="text-[10px] text-slate-500">Fix syntax</p>
+                                        </a>
+                                        <a href="#"
+                                            class="group/tool p-4 border border-slate-200 dark:border-slate-700 rounded-xl hover:shadow-md transition-all text-center">
+                                            <i class="ri-file-code-line text-2xl text-blue-500 mb-2 block"></i>
+                                            <h5 class="font-bold text-sm dark:text-white">JSON Validator</h5>
+                                            <p class="text-[10px] text-slate-500">Schema check</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <button class="nav-item-btn group" aria-expanded="false">
+                        Solutions
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </button>
+
+                    <div class="mega-menu-wrapper w-[650px] -left-48" role="region">
+                        <div class="menu-tip" style="left: 260px;"></div>
+                        <div class="mega-menu-card p-0 relative overflow-hidden">
+                            <div
+                                class="bg-slate-50 dark:bg-slate-800/50 p-3 border-b border-slate-100 dark:border-slate-700/50 flex justify-between items-center">
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-400 pl-2">Services</span>
+                                <a href="#" class="text-xs font-bold text-primary">View Pricing</a>
+                            </div>
+                            <div class="grid grid-cols-2 p-4 gap-2">
+                                <a href="/migrations-integrity"
+                                    class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group/item">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-orange-100 text-primary flex-shrink-0 flex items-center justify-center text-lg">
+                                        <i class="ri-arrow-left-right-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h5
+                                            class="font-bold text-sm text-slate-900 dark:text-white group-hover/item:text-primary transition-colors">
+                                            Migrations</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">Move to HubSpot safely.</p>
+                                    </div>
+                                </a>
+                                <a href="/custom-dev"
+                                    class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group/item">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex-shrink-0 flex items-center justify-center text-lg">
+                                        <i class="ri-code-s-slash-line"></i>
+                                    </div>
+                                    <div>
+                                        <h5
+                                            class="font-bold text-sm text-slate-900 dark:text-white group-hover/item:text-primary transition-colors">
+                                            Custom Dev</h5>
+                                        <p class="text-xs text-slate-500 mt-0.5">React apps & API.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <button class="nav-item-btn group" aria-expanded="false">
+                        Company
+                        <i class="ri-arrow-down-s-line nav-arrow"></i>
+                    </button>
+
+
+                    <div class="mega-menu-wrapper w-[550px] -left-16" role="region">
+
+                        <div class="menu-tip" style="left: 105px;"></div>
+
+                        <div
+                            class="mega-menu-card p-0 grid grid-cols-5 overflow-hidden rounded-xl bg-white dark:bg-[#0f172a] shadow-2xl border border-slate-100 dark:border-slate-800">
+
+                            <div class="col-span-3 p-5 border-r border-slate-100 dark:border-slate-800 flex flex-col">
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4 block">Company</span>
+
+                                <div class="space-y-1">
+                                    <a href="/story"
+                                        class="group flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all">
+                                        <i
+                                            class="ri-book-open-line text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                                        Our Story
+                                    </a>
+                                    <a href="/blog"
+                                        class="group flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all">
+                                        <i
+                                            class="ri-article-line text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                                        Engineering Blog
+                                    </a>
+                                    <a href="/case-study"
+                                        class="group flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all">
+                                        <i
+                                            class="ri-briefcase-line text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                                        Case Study
+                                        <span
+                                            class="ml-auto text-[9px] font-bold bg-green-500/10 text-green-600 px-1.5 py-0.5 rounded">New</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a href="/roadmap.html"
+                                class="col-span-2 group relative block h-full min-h-[180px] overflow-hidden no-underline flex flex-col justify-between transition-all duration-300 hover:shadow-2xl  bg-slate-900 dark:bg-white">
+
+                                <div
+                                    class="absolute -right-6 -bottom-6 opacity-[0.05] group-hover:opacity-10 group-hover:scale-110 transition-all duration-500 pointer-events-none">
+                                    <i class="ri-map-2-line text-[120px] text-white dark:text-slate-900"></i>
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent dark:from-purple-500/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                </div>
+
+                                <div class="relative z-10 p-5 pl-6 h-full flex flex-col justify-between">
+
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="relative flex h-2 w-2">
+                                                <span
+                                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                <span
+                                                    class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                            </span>
+                                            <span
+                                                class="font-mono text-[9px] font-bold uppercase tracking-widest transition-colors text-slate-400 dark:text-slate-500 group-hover:text-green-400 dark:group-hover:text-green-600">Live_Roadmap</span>
+                                        </div>
+
+                                        <h3
+                                            class="text-2xl font-black uppercase leading-none tracking-tight text-white dark:text-slate-900">
+                                            2026 <br>
+                                            <span
+                                                class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-600 dark:to-purple-600  duration-300">Vision</span>
+                                        </h3>
+                                    </div>
+
+                                    <div
+                                        class="mt-4 pt-4 border-t border-white/10 dark:border-slate-200 flex items-end justify-between relative">
+
+                                        <div class="space-y-1.5">
+                                            <div
+                                                class="flex items-center gap-2 text-[10px] font-mono font-medium text-slate-400 dark:text-slate-500">
+                                                <span class="w-1.5 h-1.5 bg-blue-500 rounded-sm"></span> Q1: Core_Infra
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-2 text-[10px] font-mono font-medium text-slate-400 dark:text-slate-500">
+                                                <span class="w-1.5 h-1.5 bg-purple-500 rounded-sm animate-pulse"></span>
+                                                Q2: AI_Search
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="w-8 h-8 flex items-center justify-center rounded-sm transition-all duration-300 group-hover:-translate-y-1 shadow-lg bg-white/10 text-white dark:bg-slate-900 dark:text-white group-hover:bg-blue-600 dark:group-hover:bg-blue-600">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+
+                <button id="search-trigger"
+                    class="hidden sm:flex items-center gap-2 px-3 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700 group"
+                    aria-label="Open Search">
+                    <i class="ri-search-line"></i>
+                    <span class="text-xs font-medium hidden md:block">Search...</span>
+
+                    <span
+                        class="text-[10px] px-1.5 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-slate-300 group-hover:text-primary transition-colors hidden md:block">⌘K</span>
+                </button>
+
+                <button id="mobile-search-trigger" class="sm:hidden p-2 text-slate-900 dark:text-slate-300"
+                    aria-label="Open Search">
+                    <i class="ri-search-line text-xl"></i>
+                </button>
+
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    aria-label="Toggle Dark Mode">
+                    <i id="theme-toggle-light-icon" class="ri-sun-line hidden text-primary"></i>
+                    <i id="theme-toggle-dark-icon" class="ri-moon-line hidden dark:text-white"></i>
+                </button>
+
+                <a href="#"
+                    class="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 rounded-full shadow-lg shadow-orange-500/20 transition-all">
+                    Let's Talk
+                </a>
+
+                <button id="mobile-menu-btn"
+                    class="lg:hidden p-2 text-slate-900 dark:text-white focus:outline-none z-50"
+                    aria-label="Toggle Mobile Menu">
+                    <i class="ri-menu-4-line text-2xl"></i>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <nav id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-white/98 dark:bg-[#0b1120]/98 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto"
+        aria-hidden="true">
+
+        <div class="absolute inset-0 pointer-events-none opacity-40"
+            style="background-image: radial-gradient(#94a3b8 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+        <div class="relative z-10 min-h-screen flex flex-col p-6">
+
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
+                    2CUBE<span class="text-primary">.</span>
+                </span>
+                <button id="internal-close-btn"
+                    class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 active:scale-90 active:bg-red-50 active:text-red-500 transition-all">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4 mb-10 mobile-animate delay-100">
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-slate-800 border border-orange-100 dark:border-slate-700 flex items-center justify-center text-primary mobile-touch-effect transition-all shadow-sm">
+                        <i class="ri-layout-masonry-line text-2xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 dark:text-slate-400">Themes</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 flex items-center justify-center text-blue-600 mobile-touch-effect transition-all shadow-sm">
+                        <i class="ri-function-line text-2xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 dark:text-slate-400">Modules</span>
+                </a>
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-slate-800 border border-purple-100 dark:border-slate-700 flex items-center justify-center text-purple-600 mobile-touch-effect transition-all shadow-sm">
+                        <i class="ri-github-fill text-2xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 dark:text-slate-400">Git</span>
+                </a>
+                <a href="/contact" class="flex flex-col items-center gap-2 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-green-50 dark:bg-slate-800 border border-green-100 dark:border-slate-700 flex items-center justify-center text-green-600 mobile-touch-effect transition-all shadow-sm">
+                        <i class="ri-whatsapp-line text-2xl"></i>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 dark:text-slate-400">Contact</span>
+                </a>
+            </div>
+
+            <div class="space-y-4 flex-grow">
+
+                <div
+                    class="mobile-animate delay-200 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+                    <button
+                        class="flex items-center justify-between w-full p-5 text-left mobile-accordion-btn active:bg-slate-50 dark:active:bg-slate-800 transition-colors">
+                        <span class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                            <i class="ri-store-2-line text-slate-400"></i> Products
+                        </span>
+                        <i class="ri-add-line text-xl text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="px-5 pb-5 space-y-4 mobile-accordion-content border-t border-slate-100 dark:border-slate-700/50 pt-4 bg-slate-50/50 dark:bg-slate-900/30">
+                        <a href="#"
+                            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 active:text-primary font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div> HubSpot Themes
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 active:text-primary font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div> Custom Modules
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 active:text-primary font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div> Open Source
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="mobile-animate delay-300 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-sm">
+                    <button
+                        class="flex items-center justify-between w-full p-5 text-left mobile-accordion-btn active:bg-slate-50 dark:active:bg-slate-800 transition-colors">
+                        <span class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                            <i class="ri-code-box-line text-slate-400"></i> Solutions
+                        </span>
+                        <i class="ri-add-line text-xl text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="px-5 pb-5 space-y-4 mobile-accordion-content border-t border-slate-100 dark:border-slate-700/50 pt-4 bg-slate-50/50 dark:bg-slate-900/30">
+                        <a href="#"
+                            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 active:text-primary font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div> Migrations
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-3 text-slate-600 dark:text-slate-300 active:text-primary font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div> Custom Dev
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="mobile-animate delay-400 flex items-center justify-between p-5 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm active:border-primary/50 active:bg-orange-50 dark:active:bg-slate-800 transition-all">
+                    <span class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="ri-building-4-line text-slate-400"></i> Company
+                    </span>
+                    <i class="ri-arrow-right-line text-slate-400"></i>
+                </a>
+            </div>
+
+            <div class="mt-8 pb-8 mobile-animate delay-500">
+                <a href="/contact"
+                    class="flex items-center justify-center w-full py-4 text-white bg-primary active:bg-orange-700 rounded-2xl font-bold text-xl shadow-lg shadow-orange-500/30 active:scale-95 transition-all">
+                    Start Project
+                </a>
+
+                <div class="flex justify-center gap-8 mt-8">
+                    <a href="#" class="text-slate-400 active:text-slate-900 transition-colors p-2"><i
+                            class="ri-github-fill text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 active:text-blue-400 transition-colors p-2"><i
+                            class="ri-twitter-x-fill text-2xl"></i></a>
+                    <a href="#" class="text-slate-400 active:text-blue-600 transition-colors p-2"><i
+                            class="ri-linkedin-fill text-2xl"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="search-modal"
+        class="fixed inset-0 z-[60] bg-slate-900/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200"
+        role="dialog" aria-modal="true" aria-label="Search Site">
+        <div class="min-h-screen px-4 text-center">
+            <div class="absolute inset-0 z-[999999]" id="search-overlay-close"></div>
+
+            <div class="inline-block w-full max-w-2xl mt-20 text-left align-middle transition-all transform bg-white dark:bg-[#1e293b] shadow-2xl rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 scale-95 opacity-0"
+                id="search-container">
+
+                <div class="relative border-b border-slate-100 dark:border-slate-700">
+                    <i class="ri-search-line absolute left-4 top-4 text-xl text-slate-400"></i>
+                    <input type="search" placeholder="Type to search themes, docs..."
+                        class="w-full h-14 pl-12 pr-4 bg-transparent text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none text-lg"
+                        autofocus aria-label="Search Input">
+                    <button id="close-search"
+                        class="absolute right-4 top-3 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 bg-slate-100 dark:bg-slate-700 rounded text-xs"
+                        aria-label="Close">ESC</button>
+                </div>
+
+                <div class="p-4 bg-slate-50 dark:bg-[#0b1120]">
+                    <span
+                        class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 block px-2">Recent</span>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 hover:text-primary text-slate-600 dark:text-slate-300 transition-colors group">
+                                <i class="ri-layout-masonry-line text-lg text-slate-400 group-hover:text-primary"></i>
+                                <span>Browse Themes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

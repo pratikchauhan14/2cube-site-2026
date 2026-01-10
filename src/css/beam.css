@@ -1,0 +1,134 @@
+:root {
+    --grid-color: rgba(0, 0, 0, 0.06);
+    --grid-strong: rgba(0, 0, 0, 0.2); /* Frame Darker */
+    
+    /* BEAM SETTINGS */
+    --beam-color: #fe7b00;
+    --beam-glow: 0 0 10px rgba(254, 123, 0, 0.4);
+    --beam-opacity: 0.6; /* Thoda visible kiya */
+}
+
+.dark {
+    --grid-color: rgba(255, 255, 255, 0.04);
+    --grid-strong: rgba(255, 255, 255, 0.15);
+    --beam-color: #ffffff;
+    --beam-glow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* MAIN WRAPPER */
+.global-grid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+/* FRAME (Container Lock) */
+.grid-frame {
+    position: relative;
+    width: 100%;
+    max-width: 90rem; /* Matches Wrapper */
+    height: 100%;
+    padding: 0 1.5rem;
+    
+    /* Outer Borders */
+    border-left: 1px solid var(--grid-strong);
+    border-right: 1px solid var(--grid-strong);
+}
+
+/* --- LAYER 1: HORIZONTAL ROWS --- */
+.grid-rows-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.grid-row {
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed var(--grid-color);
+    position: relative;
+}
+
+/* --- LAYER 2: VERTICAL COLUMNS --- */
+.grid-cols-layer {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .grid-cols-layer { grid-template-columns: repeat(2, 1fr); }
+}
+
+.grid-col {
+    position: relative;
+    height: 100%;
+    border-right: 1px dashed var(--grid-color);
+}
+
+/* Fix for Last Line Beam Issue */
+/* Last column ka border hatate nahi hain, bas ensure karte hain wo dikhe */
+.grid-col:last-child {
+    border-right: none; /* Last border Frame handle kar raha hai */
+}
+
+/* --- BEAM ANIMATIONS (Precision Fix) --- */
+.beam {
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, var(--beam-color), transparent);
+    box-shadow: var(--beam-glow);
+    opacity: 0;
+    border-radius: 99px;
+}
+
+/* Vertical Drop (On Right Border) */
+.beam-v {
+    top: -300px;
+    right: -1px; /* Exact Border Position */
+    width: 1.5px; /* Thoda mota taki dikhe */
+    height: 250px;
+    animation: dropBeamV 7s linear infinite;
+}
+
+/* Special Beam for Last Line (Rightmost Edge) */
+.beam-v-last {
+    top: -300px;
+    right: -1.5px; /* Frame border ke upar */
+    width: 1.5px;
+    height: 250px;
+    position: absolute;
+    animation: dropBeamV 7s linear infinite;
+}
+
+/* Horizontal Run (On Top Border) */
+.beam-h {
+    left: -300px;
+    top: -1px; /* Exact Border Position */
+    height: 1.5px;
+    width: 250px;
+    background: linear-gradient(to right, transparent, var(--beam-color), transparent);
+    animation: dropBeamH 8s linear infinite;
+}
+
+@keyframes dropBeamV {
+    0% { top: -300px; opacity: 0; }
+    30% { opacity: var(--beam-opacity); }
+    80% { opacity: var(--beam-opacity); }
+    100% { top: 110vh; opacity: 0; }
+}
+
+@keyframes dropBeamH {
+    0% { left: -300px; opacity: 0; }
+    30% { opacity: var(--beam-opacity); }
+    80% { opacity: var(--beam-opacity); }
+    100% { left: 100vw; opacity: 0; }
+}

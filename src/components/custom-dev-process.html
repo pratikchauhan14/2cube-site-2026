@@ -1,0 +1,136 @@
+<section class="py-24 bg-white dark:bg-[#080c14] border-t border-slate-200 dark:border-slate-800 relative">
+    <div class="wrapper">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+            
+            <div class="lg:col-span-4">
+                <div class="sticky top-32">
+                    <span class="font-mono text-green-500 text-xs font-bold uppercase tracking-widest">Workflow Protocol</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mt-3 mb-6 tracking-tight leading-none">
+                        The DevOps <br>
+                        <span class="text-green-500">Pipeline.</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8">
+                        We don't code in the dark. We use a transparent, automated CI/CD pipeline. Every line of code is versioned, tested, and deployed safely.
+                    </p>
+
+                    <div class="bg-slate-50 dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 p-4 rounded-lg font-mono text-xs">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-slate-500">Current Branch:</span>
+                            <span class="text-purple-500 font-bold"><i class="ri-git-branch-line"></i> main</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-slate-500">Last Build:</span>
+                            <span class="text-slate-900 dark:text-white">#4209</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-500">Status:</span>
+                            <span class="flex items-center gap-2 text-green-500 font-bold">
+                                <span class="relative flex h-2 w-2">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                </span>
+                                PASSING
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8">
+                <div class="relative pl-8 md:pl-12 border-l-2 border-slate-100 dark:border-slate-800 space-y-16">
+
+                    <div class="relative group">
+                        <div class="absolute -left-[33px] md:-left-[49px] top-[14px] -translate-x-1/2 w-5 h-5 bg-white dark:bg-[#080c14] border-4 border-purple-500 rounded-full z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                            <div class="pt-1 shrink-0">
+                                <span class="font-black text-5xl text-slate-100 dark:text-slate-800/50 leading-none">01</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                                    Version Control
+                                    <span class="px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-900/30 text-[10px] font-mono text-purple-600 dark:text-purple-400 uppercase tracking-wider">GIT</span>
+                                </h3>
+                                <div class="mt-3 bg-slate-900 rounded p-3 font-mono text-xs text-slate-300 border border-slate-700 shadow-lg w-fit">
+                                    <span class="text-purple-400">➜</span> git commit -m "feat: new headless module"
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                                    We use feature branches. Your main site code is never touched directly. Changes are isolated, peer-reviewed, and merged only when perfect.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -left-[33px] md:-left-[49px] top-[14px] -translate-x-1/2 w-5 h-5 bg-white dark:bg-[#080c14] border-4 border-orange-500 rounded-full z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                            <div class="pt-1 shrink-0">
+                                <span class="font-black text-5xl text-slate-100 dark:text-slate-800/50 leading-none">02</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                                    Automated Build
+                                    <span class="px-2 py-0.5 rounded bg-orange-100 dark:bg-orange-900/30 text-[10px] font-mono text-orange-600 dark:text-orange-400 uppercase tracking-wider">CI / CD</span>
+                                </h3>
+                                <div class="mt-3 bg-slate-900 rounded p-3 font-mono text-xs text-slate-300 border border-slate-700 shadow-lg w-fit">
+                                    <span class="text-orange-400">➜</span> npm run build && lint check
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                                    Upon pushing code, our servers (Vercel/Netlify) automatically trigger a build script. If there is a single error or bug, the build fails and protects the live site.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -left-[33px] md:-left-[49px] top-[14px] -translate-x-1/2 w-5 h-5 bg-white dark:bg-[#080c14] border-4 border-blue-500 rounded-full z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                        
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                            <div class="pt-1 shrink-0">
+                                <span class="font-black text-5xl text-slate-100 dark:text-slate-800/50 leading-none">03</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                                    Preview URL
+                                    <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/30 text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider">STAGING</span>
+                                </h3>
+                                <div class="mt-3 bg-slate-900 rounded p-3 font-mono text-xs text-slate-300 border border-slate-700 shadow-lg w-fit">
+                                    <span class="text-blue-400">➜</span> deploy --target=preview
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                                    Before going live, you get a unique <span class="font-mono bg-slate-100 dark:bg-slate-800 px-1">preview-url.com</span> link. It looks and feels exactly like the live site, allowing you to test safely.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -left-[33px] md:-left-[49px] top-[14px] -translate-x-1/2 w-5 h-5 bg-white dark:bg-[#080c14] border-4 border-green-500 rounded-full z-10 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_#22c55e]"></div>
+                        
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                            <div class="pt-1 shrink-0">
+                                <span class="font-black text-5xl text-slate-100 dark:text-slate-800/50 leading-none">04</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                                    Edge Deployment
+                                    <span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-[10px] font-mono text-green-600 dark:text-green-400 uppercase tracking-wider">PRODUCTION</span>
+                                </h3>
+                                <div class="mt-3 bg-slate-900 rounded p-3 font-mono text-xs text-slate-300 border border-slate-700 shadow-lg w-fit">
+                                    <span class="text-green-400">➜</span> git merge main --deploy
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+                                    Instant propagation to Edge Networks worldwide. The moment we merge, your site is updated globally in milliseconds. No FTP. No waiting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

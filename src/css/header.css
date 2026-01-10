@@ -1,0 +1,319 @@
+/* =================================================================
+   1. NAVIGATION LINKS (BUTTONS & PILL EFFECT)
+   ================================================================= */
+
+/* Main Nav Item Button */
+.nav-item-btn {
+    @apply relative flex items-center justify-center gap-1.5 px-4 py-2.5 text-[14px] font-semibold text-slate-600 dark:text-slate-300 transition-all duration-300 outline-none cursor-pointer bg-transparent border-none z-20;
+    line-height: 1; 
+}
+
+/* Hover State Text Color */
+.group:hover .nav-item-btn {
+    @apply text-primary dark:text-white;
+}
+
+/* The "Pill" Background (Slide Effect) */
+.nav-item-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: #f1f5f9;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+/* Dark Mode Pill Color */
+.dark .nav-item-btn::before { 
+    background-color: #1e293b; 
+}
+
+/* Show Pill on Hover */
+.group:hover .nav-item-btn::before { 
+    transform: scale(1); 
+    opacity: 1; 
+}
+
+/* Navigation Arrow */
+.nav-arrow {
+    @apply text-lg leading-none flex items-center mt-0.5 transition-transform duration-300;
+    color: #94a3b8; 
+}
+
+.group:hover .nav-arrow { 
+    @apply rotate-180 text-primary; 
+}
+
+
+/* =================================================================
+   2. DESKTOP MEGA MENU (WRAPPER & CARD)
+   ================================================================= */
+
+.mega-menu-wrapper {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+    z-index: 40;
+    padding-top: 15px; /* Invisible Bridge */
+}
+
+/* Show Menu State */
+.group:hover .mega-menu-wrapper {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Main Card */
+.mega-menu-card {
+    @apply relative bg-white/95 dark:bg-[#0b1120]/95 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/60 shadow-2xl rounded-2xl overflow-hidden mx-auto;
+}
+
+/* Tech Grid Pattern */
+.bg-grid-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+.dark .bg-grid-pattern {
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+    opacity: 0.2;
+}
+
+/* Connector Tip */
+.menu-tip {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    transform: rotate(45deg);
+    border-top: 1px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
+    z-index: 41;
+}
+.dark .menu-tip {
+    background-color: #0b1120;
+    border-color: rgba(30, 41, 59, 0.6);
+}
+
+
+/* =================================================================
+   3. TABS SYSTEM (DESKTOP)
+   ================================================================= */
+
+.tab-btn {
+    @apply w-full flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-xl transition-all duration-200 cursor-pointer border border-transparent;
+}
+
+.tab-btn:hover {
+    @apply bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white;
+}
+
+.tab-btn.active-tab {
+    @apply bg-orange-50 dark:bg-orange-900/20 text-primary border-primary/10 shadow-sm;
+}
+
+.tab-icon {
+    @apply text-lg transition-colors;
+}
+.active-tab .tab-icon {
+    @apply text-primary;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+.tab-content.active-content {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =================================================================
+   4. CREATIVE ELEMENTS (ICONS & TERMINAL)
+   ================================================================= */
+
+/* Spotlight Card */
+.spotlight-card {
+    @apply relative overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl transition-all duration-300;
+}
+.spotlight-card:hover {
+    @apply border-primary/50 shadow-lg shadow-orange-500/10 -translate-y-1;
+}
+
+/* Terminal */
+.terminal-window {
+    @apply bg-[#1e1e1e] rounded-lg border border-slate-700 font-mono text-xs p-4 text-slate-300 shadow-2xl;
+}
+.code-line { @apply flex gap-3 mb-2; }
+.line-num { @apply text-slate-600 select-none; }
+.cursor { @apply inline-block w-2 h-4 bg-green-500 animate-pulse align-middle ml-1; }
+
+/* Square Icons */
+.icon-box-creative {
+    @apply flex-shrink-0 flex items-center justify-center w-12 h-12 aspect-square rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm border border-slate-100 dark:border-slate-700/50;
+}
+
+/* Logo */
+.logo-dot { @apply inline-block text-primary transition-all duration-500; }
+.logo-group:hover .logo-dot { text-shadow: 0 0 15px rgba(254, 123, 0, 0.6); }
+
+/* Scrolled Header */
+.scrolled-header {
+    @apply bg-white/90 backdrop-blur-lg border-slate-200/80 py-2;
+}
+.dark .scrolled-header {
+    @apply bg-[#0f172a]/90 border-slate-800/80;
+}
+
+
+/* =================================================================
+   5. MOBILE MENU (CLEAN & FIXED)
+   ================================================================= */
+
+/* HIDE MEGA MENU ON MOBILE */
+@media (max-width: 1024px) {
+    .mega-menu-wrapper {
+        display: none !important;
+    }
+}
+
+/* HIDE MOBILE MENU ON DESKTOP */
+@media (min-width: 1024px) {
+    #mobile-menu {
+        display: none !important;
+    }
+}
+
+/* BASE MOBILE MENU (Full Screen Overlay) */
+#mobile-menu {
+    display: block; /* Ensure it exists in DOM */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    /* Start off-screen */
+    transform: translateX(100%); 
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Safe Area Padding */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* OPEN STATE (JS toggles this class) */
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* MOBILE ACCORDION (Expand/Collapse) */
+.mobile-accordion-content {
+    /* Animate Height, Opacity, Padding, and Border */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Hide everything by default */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    
+    /* FORCE ZERO SPACING WHEN CLOSED (Ye zaroori hai) */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-top-width: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Open State */
+.mobile-accordion-content.open {
+    opacity: 1;
+    /* Enough height to fit content */
+    max-height: 600px; 
+    
+    /* RESTORE SPACING (Matches Tailwind classes: pt-4, pb-5) */
+    padding-top: 1rem !important;    /* 16px */
+    padding-bottom: 1.25rem !important; /* 20px */
+    border-top-width: 1px !important;
+}
+
+/* ACTIVE STATE STYLING */
+.mobile-accordion-btn[aria-expanded="true"] {
+    @apply text-primary;
+}
+.mobile-accordion-btn[aria-expanded="true"] i.ri-add-line {
+    transform: rotate(45deg);
+    color: #fe7b00;
+}
+
+/* MOBILE GRID & TOUCH EFFECTS */
+.mobile-grid-item {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.mobile-touch-effect:active {
+    transform: scale(0.95);
+    background-color: #f1f5f9;
+}
+.dark .mobile-touch-effect:active {
+    background-color: #1e293b;
+}
+
+/* REMOVE SCROLLBAR (Visual Polish) */
+#mobile-menu ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* SEARCH MODAL (Desktop) */
+#search-modal.open {
+    display: block;
+    opacity: 1;
+}
+#search-modal.open #search-container {
+    transform: scale(100%);
+    opacity: 1;
+}
+
+
+/* =================================================================
+   6. MOBILE MENU ANIMATIONS (SMOOTH ENTRY)
+   ================================================================= */
+
+/* 1. Base State: Hidden & Pushed Down */
+.mobile-animate {
+    opacity: 0;
+    transform: translateY(20px); /* Thoda neeche */
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Open State: Visible & Reset Position */
+/* Ye tabhi chalega jab parent (#mobile-menu) par .open class hogi */
+#mobile-menu.open .mobile-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3. Staggered Delays (Ek ke baad ek aayenge) */
+#mobile-menu.open .delay-100 { transition-delay: 0.1s; }
+#mobile-menu.open .delay-200 { transition-delay: 0.15s; }
+#mobile-menu.open .delay-300 { transition-delay: 0.2s; }
+#mobile-menu.open .delay-400 { transition-delay: 0.25s; }
+#mobile-menu.open .delay-500 { transition-delay: 0.3s; }

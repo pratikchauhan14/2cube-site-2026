@@ -1,0 +1,70 @@
+/* -----------------------------------------
+   1. Base Button Structure (Common for all)
+----------------------------------------- */
+.btn {
+    /* Changes: rounded-full -> rounded-none, added uppercase & tracking */
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-none font-bold text-sm transition-all duration-300 cursor-pointer relative overflow-hidden uppercase tracking-widest;
+    letter-spacing: 0.15em; /* Thoda wide text for Tech feel */
+}
+
+/* Hover: Lift Effect (Sharp) */
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Active: Press Effect */
+.btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* -----------------------------------------
+   2. Primary Button (The "Creative" Orange)
+----------------------------------------- */
+.btn-primary {
+    /* Gradient Background */
+    @apply bg-gradient-to-r from-orange-600 to-red-600 text-white;
+    
+    /* Sharp Border for definition */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Colored Shadow (Glow) */
+    box-shadow: 0 10px 30px -10px rgba(234, 88, 12, 0.5);
+}
+
+.btn-primary:hover {
+    /* Hover pe shadow aur sharp */
+    box-shadow: 0 20px 40px -10px rgba(234, 88, 12, 0.6);
+    @apply to-orange-500; 
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Shine Effect (Sharp Slice) */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    /* Tilted sharp line instead of soft gradient */
+    background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+    left: 100%; 
+}
+
+/* -----------------------------------------
+   3. Secondary Button (Wireframe Style)
+----------------------------------------- */
+.btn-secondary {
+    @apply bg-transparent text-slate-900 dark:text-white border border-slate-300 dark:border-slate-700;
+}
+
+.btn-secondary:hover {
+    /* Tech Hover: Orange Border & Text */
+    @apply border-orange-500 text-orange-500 bg-slate-50 dark:bg-slate-800/50;
+    box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.1);
+}
