@@ -1,100 +1,187 @@
-<section class="py-24 bg-slate-50/50 dark:bg-[#0b1120]/50 relative">
+<section class="py-8 md:py-16 lg:py-24 bg-slate-50/50 dark:bg-[#0b1120]/50 relative" aria-label="Open Source Repositories">
     <div class="wrapper">
         
-        <div class="flex items-center justify-between mb-12 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div class="flex items-center justify-between mb-6 md:mb-12 border-b border-slate-200 dark:border-slate-800 pb-4">
             <h2 class="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                <span class="text-orange-500 mr-2">./</span> Active Repositories
+                <span class="text-orange-500 mr-2" aria-hidden="true">./</span> Active Repositories
             </h2>
             <div class="hidden md:flex gap-4 text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">
-                <span class="flex items-center gap-1"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> JS/TS</span>
+                <span class="flex items-center gap-1"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> TypeScript</span>
+                <span class="flex items-center gap-1"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> JavaScript</span>
                 <span class="flex items-center gap-1"><span class="w-2 h-2 bg-orange-500 rounded-full"></span> HubL</span>
-                <span class="flex items-center gap-1"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> CSS</span>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800">
 
-            <a href="#" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+            <a href="https://contenthub.2cube.studio/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex items-center gap-3">
-                        <i class="ri-book-mark-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl"></i>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">hubspot-boilerplate-pro</h3>
+                        <i class="ri-book-open-page-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">2cube-content-hub</h3>
                     </div>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Public</span>
+                    <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-[10px] font-mono uppercase tracking-wider text-purple-600 font-bold">Featured</span>
                 </div>
                 <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
-                    An advanced HubSpot CMS boilerplate optimized for speed, Tailwind CSS integration, and modular architecture.
+                    A centralized documentation and asset library for HubSpot developers. Access style guides, component docs, and reusable snippets.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-orange-500 rounded-full"></span> Documentation</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">explore_hub -></span>
+                </div>
+            </a>
+
+            <a href="https://advanced-email-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-mail-settings-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">email-generator-pro</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-[10px] font-mono uppercase tracking-wider text-blue-600 font-bold">App</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    A visual builder to generate responsive HTML email templates instantly. Built with React/Next.js for seamless drag-and-drop customization.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> Next.js</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">build_email -></span>
+                </div>
+            </a>
+
+            <a href="https://pratikchauhan14.github.io/hubspot-advanced-search-input/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-search-eye-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">hubspot-search-ui</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Demo</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    A lightweight, dependency-free advanced search component. Features real-time autocomplete, debouncing, and keyboard navigation.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> JavaScript</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">try_demo -></span>
+                </div>
+            </a>
+
+            <a href="https://pratikchauhan14.github.io/canvas-editor-public/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-edit-box-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">fabric-canvas-editor</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Live</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    Advanced web-based graphics editor using Fabric.js. Draw, edit, add text, and export images directly in the browser.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> TypeScript</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">open_demo -></span>
+                </div>
+            </a>
+
+            <a href="https://pratikchauhan14.github.io/open-street-map-locator/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-map-pin-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">map-locator-js</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Live</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    Interactive store locator built with Leaflet.js. Features real-time filtering, custom markers, and dynamic list syncing.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> JavaScript</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">open_map -></span>
+                </div>
+            </a>
+
+            <a href="https://chrome.google.com/webstore/detail/hs-toolkit/adbgdmoblkaglinaodfjjjcckcgkcecf" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-chrome-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">hs-toolkit-ext</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-[10px] font-mono uppercase tracking-wider text-green-600 font-bold">Store</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    Developer productivity tool for HubSpot. Toggle debug mode, clear cache, and access snippets instantly.
+                </p>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> JavaScript</span>
+                    </div>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">install -></span>
+                </div>
+            </a>
+
+            <a href="https://pratikchauhan14.github.io/hubl-html-cleaner/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-3">
+                        <i class="ri-code-s-slash-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">hubl-formatter</h3>
+                    </div>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Tool</span>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
+                    Web-based cleaner to format and indent mixed HTML & HubL code. Essential for maintaining clean HubSpot templates.
                 </p>
                 <div class="flex items-center justify-between text-xs font-mono text-slate-500">
                     <div class="flex items-center gap-4">
                         <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-orange-500 rounded-full"></span> HubL</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-star-line"></i> 124</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-git-branch-line"></i> 42</span>
                     </div>
-                    <span class="group-hover:translate-x-1 transition-transform">view_code -></span>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">use_tool -></span>
                 </div>
             </a>
 
-            <a href="#" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+            <a href="https://pratikchauhan14.github.io/step-form/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex items-center gap-3">
-                        <i class="ri-book-mark-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl"></i>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">nextjs-agency-starter</h3>
+                        <i class="ri-list-check-2 text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">multi-step-form</h3>
                     </div>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Public</span>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Demo</span>
                 </div>
                 <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
-                    A headless production-ready starter kit for agencies. Includes Framer Motion, GSAP, and SEO utilities.
+                    Dynamic multi-step form logic with state persistence. Built for seamless user onboarding flows in HubSpot.
                 </p>
                 <div class="flex items-center justify-between text-xs font-mono text-slate-500">
                     <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full"></span> TypeScript</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-star-line"></i> 89</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-git-branch-line"></i> 15</span>
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> CSS/JS</span>
                     </div>
-                    <span class="group-hover:translate-x-1 transition-transform">view_code -></span>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">view_form -></span>
                 </div>
             </a>
 
-            <a href="#" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
+            <a href="https://pratikchauhan14.github.io/hubspot-dynamic-pricing-calculator/" target="_blank" rel="noopener noreferrer" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex items-center gap-3">
-                        <i class="ri-book-mark-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl"></i>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">react-calculator-modules</h3>
+                        <i class="ri-calculator-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">saas-calculator</h3>
                     </div>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Public</span>
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Demo</span>
                 </div>
                 <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
-                    Collection of 20+ financial and ROI calculators built as reusable React components.
+                    Interactive SaaS pricing calculator powered by HubDB. Supports toggles, user inputs, and dynamic total estimation.
                 </p>
                 <div class="flex items-center justify-between text-xs font-mono text-slate-500">
                     <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-blue-500 rounded-full"></span> React</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-star-line"></i> 256</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-git-branch-line"></i> 64</span>
+                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-orange-500 rounded-full"></span> HubDB</span>
                     </div>
-                    <span class="group-hover:translate-x-1 transition-transform">view_code -></span>
-                </div>
-            </a>
-
-            <a href="#" class="group relative bg-white dark:bg-[#0f172a] p-8 hover:bg-slate-50 dark:hover:bg-[#131c33] transition-all">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="flex items-center gap-3">
-                        <i class="ri-book-mark-line text-slate-400 group-hover:text-orange-500 transition-colors text-xl"></i>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors">hubspot-cli-tools</h3>
-                    </div>
-                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-[10px] font-mono uppercase tracking-wider text-slate-500">Public</span>
-                </div>
-                <p class="text-sm text-slate-600 dark:text-slate-400 mb-8 h-10 line-clamp-2">
-                    Custom CLI scripts to automate HubSpot module scaffolding and field generation.
-                </p>
-                <div class="flex items-center justify-between text-xs font-mono text-slate-500">
-                    <div class="flex items-center gap-4">
-                        <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Node.js</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-star-line"></i> 45</span>
-                        <span class="flex items-center gap-1 hover:text-white transition-colors"><i class="ri-git-branch-line"></i> 8</span>
-                    </div>
-                    <span class="group-hover:translate-x-1 transition-transform">view_code -></span>
+                    <span class="group-hover:translate-x-1 transition-transform text-orange-500 font-bold">calculate -></span>
                 </div>
             </a>
 

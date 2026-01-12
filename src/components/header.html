@@ -344,7 +344,7 @@
                 </button>
 
                 <button id="theme-toggle"
-                    class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors w-10 h-10"
                     aria-label="Toggle Dark Mode">
                     <i id="theme-toggle-light-icon" class="ri-sun-line hidden text-primary"></i>
                     <i id="theme-toggle-dark-icon" class="ri-moon-line hidden dark:text-white"></i>
@@ -530,3 +530,12 @@
         </div>
     </div>
 </header>
+<style>
+/* Utility for JS-forced menu visibility */
+.menu-force-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+</style>

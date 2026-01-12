@@ -1,37 +1,65 @@
 import { defineConfig } from 'vite';
 import injectHtml from 'vite-plugin-html-inject';
-// import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import fs from 'fs';
+import path from 'path';
+
+// --- CUSTOM PLUGIN START ---
+// Ye plugin HTML me <icon> tag dhoondh kar usse SVG code se replace karega
+const htmlIconPlugin = () => {
+  return {
+    name: 'html-icon-transform',
+    transformIndexHtml(html) {
+      // Regex jo <icon name="..." class="..." /> ko pakdega
+      return html.replace(/<icon\s+name="([^"]+)"\s*(?:class="([^"]+)")?\s*\/?>/g, (match, iconName, className) => {
+        try {
+          // 1. Icon file ka path dhoondo
+          const iconPath = path.resolve(__dirname, `src/icons/${iconName}.svg`);
+          
+          // 2. File read karo
+          let svgContent = fs.readFileSync(iconPath, 'utf-8');
+
+          // 3. Agar user ne class di hai, to SVG tag me inject karo
+          if (className) {
+            // SVG tag ke andar class add kar rahe hain
+            svgContent = svgContent.replace('<svg', `<svg class="${className}"`);
+          }
+
+          // 4. Raw SVG return karo
+          return svgContent;
+        } catch (error) {
+          console.error(`❌ Icon not found: ${iconName}`);
+          return match; // Agar file nahi mili to waisa hi chhod do
+        }
+      });
+    },
+  };
+};
+// --- CUSTOM PLUGIN END ---
 
 export default defineConfig({
-  plugins: [
-    injectHtml(), // HTML Components jodta hai
-    
-    // Images ko automatic compress karega (png, jpeg, svg)
-    // ViteImageOptimizer({
-    //   png: { quality: 80 },
-    //   jpeg: { quality: 75 },
-    //   webp: { quality: 80 },
-    //   svg: {
-    //     plugins: [
-    //       { name: 'removeViewBox', active: false },
-    //       { name: 'removeDimensions', active: true },
-    //     ],
-    //   },
-    // }),
-  ],
-  server: {
-    open: true,
+  css: {
+    postcss: {
+      plugins: [
+        tailwindcss(),
+        autoprefixer(),
+        cssnano({ preset: 'default' }),
+      ]
+    }
   },
+
+  plugins: [
+    injectHtml(),
+    htmlIconPlugin(), // ✅ Humara naya plugin yahan lagaya
+  ],
+
+  server: { open: true },
+  
   build: {
     outDir: 'dist',
-    minify: 'terser', // 'esbuild' se thoda slow hai par size chhota karta hai
-    terserOptions: {
-      compress: {
-        drop_console: true, // Production me console.log hata dega
-        drop_debugger: true,
-      },
-    },
-    cssMinify: 'lightningcss', // CSS ko fast aur better compress karega
+    cssMinify: 'esbuild',
     rollupOptions: {
       input: {
         main: 'index.html',
@@ -48,22 +76,6 @@ export default defineConfig({
         'case-study': 'case-study.html',
         'case-study-inner': 'case-study-inner.html',
       },
-      output: {
-        // JS files ko alag-alag tukdo me todega (Better Caching)
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor'; // Library code alag file me jayega
-          }
-        },
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.svg') && assetInfo.name.includes('remixicon')) {
-             // RemixIcon SVG ko alag folder me fek do ya ignore karo (Technically hum rok nahi sakte without plugin, 
-             // par modern browsers woff2 hi uthayenge, so 2.8MB file download nahi hogi user ke liye).
-             return 'assets/icons/[name]-[hash][extname]'; 
-          }
-          return 'assets/[name]-[hash][extname]';
-        }
-      },
-    },
-  },
+    }
+  }
 });

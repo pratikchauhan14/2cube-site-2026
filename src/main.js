@@ -72,21 +72,83 @@ function initMegaMenuTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    // Helper to switch tabs
+    function switchTab(targetId, activeBtn) {
+        // Remove active class from all
+        tabBtns.forEach(b => {
+            b.classList.remove('active-tab');
+            b.setAttribute('aria-selected', 'false'); // A11y update
+        });
+        tabContents.forEach(c => {
+            c.classList.remove('active-content');
+            c.style.display = 'none'; // Ensure hidden from screen readers/layout
+        });
+
+        // Add active class to current
+        activeBtn.classList.add('active-tab');
+        activeBtn.setAttribute('aria-selected', 'true'); // A11y update
+        
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+            targetContent.classList.add('active-content');
+            targetContent.style.display = 'block';
+        }
+    }
+
     if (tabBtns.length > 0) {
         tabBtns.forEach(btn => {
+            const targetId = btn.getAttribute('data-target');
+
+            // Event 1: Mouse Hover
             btn.addEventListener('mouseenter', () => {
-                const targetId = btn.getAttribute('data-target');
+                switchTab(targetId, btn);
+            });
 
-                // Remove active class from all
-                tabBtns.forEach(b => b.classList.remove('active-tab'));
-                tabContents.forEach(c => c.classList.remove('active-content'));
+            // Event 2: Keyboard Focus (Tab key) - SYNC LOGIC
+            btn.addEventListener('focus', () => {
+                switchTab(targetId, btn);
+            });
 
-                // Add active class to current
-                btn.classList.add('active-tab');
-                document.getElementById(targetId)?.classList.add('active-content');
+            // Event 3: Keyboard Enter/Space (Explicit selection)
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    switchTab(targetId, btn);
+                }
             });
         });
     }
+
+    // New: Handle Menu Visibility on Focus (Fix for Tab Navigation)
+    const navGroups = document.querySelectorAll('.group.relative');
+    navGroups.forEach(group => {
+        const btn = group.querySelector('.nav-item-btn');
+        const menu = group.querySelector('.mega-menu-wrapper');
+
+        if (!btn || !menu) return;
+
+        // Force Open Menu on Focus Inside
+        group.addEventListener('focusin', () => {
+            menu.classList.add('menu-force-open'); // Add CSS class to force visibility
+            btn.setAttribute('aria-expanded', 'true');
+        });
+
+        // Close Menu when Focus Leaves
+        group.addEventListener('focusout', (e) => {
+            if (!group.contains(e.relatedTarget)) {
+                menu.classList.remove('menu-force-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Handle Escape Key
+        group.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                menu.classList.remove('menu-force-open');
+                btn.focus();
+            }
+        });
+    });
 }
 
 /* =================================================================
@@ -237,3 +299,6 @@ function initSearchModal() {
         }
     });
 }
+
+
+

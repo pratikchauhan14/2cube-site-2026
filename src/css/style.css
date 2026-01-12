@@ -2,8 +2,6 @@
 @import '@fontsource-variable/inter';
 @import '@fontsource-variable/jetbrains-mono';
 
-
-@import "remixicon/fonts/remixicon.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./buttons.css";
@@ -177,4 +175,38 @@ body {
 .dark .text-slate-400, 
 .dark .text-slate-500 {
     text-shadow: 0 0 0.5px rgba(255,255,255,0.1);
+}
+
+
+.filter-btn.active {
+        color: #f97316; /* Orange */
+        border-color: #f97316;
+    }
+    
+    /* Animation for filtering */
+    .filter-item {
+        transition: all 0.3s ease-in-out;
+    }
+    .filter-item.hide {
+        display: none;
+    }
+    .filter-item.show {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    @keyframes shimmer {
+    100% { transform: translateX(100%); }
 }

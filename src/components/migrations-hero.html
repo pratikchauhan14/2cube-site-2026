@@ -1,9 +1,9 @@
-<section class="relative pt-40 pb-20 overflow-hidden border-b border-slate-200 dark:border-slate-800">
+<section class="relative pt-40 pb-10 md:pb-20 overflow-hidden border-b border-slate-200 dark:border-slate-800" aria-label="Migration Service Hero">
     
     <div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: linear-gradient(#000 1px, transparent 1px), linear-gradient(to right, #000 1px, transparent 1px); background-size: 40px 40px;"></div>
 
     <div class="wrapper relative z-10">
-        <div class="flex flex-col lg:flex-row justify-between items-center gap-16">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-16">
             
             <div class="w-full max-w-2xl text-left">
                 <div class="flex items-center gap-3 mb-6">
@@ -18,21 +18,18 @@
                     </div>
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter leading-[1.1] mb-6">
-                    Move to HubSpot. <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Without Data Loss.</span>
+                <h1 class="text-3xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter leading-[1.1] mb-6">
+                    Replatform to HubSpot. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Zero Data Loss.</span>
                 </h1>
                 
-                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed mb-8">
-                    We migrate complex data structures from WordPress or Custom DBs to HubSpot using <span class="font-mono text-orange-500 font-bold">CLI Scripts</span>, not generic plugins.
+                <p class=" text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed mb-8">
+                    We migrate complex data structures from <strong>WordPress</strong>, <strong>Drupal</strong>, or Custom DBs to HubSpot using <span class="font-mono text-orange-500 font-bold">CLI Scripts</span> & APIs, ensuring complete data integrity.
                 </p>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#timeline-section" class="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold uppercase tracking-widest hover:bg-orange-500 dark:hover:bg-orange-500 hover:text-white transition-all">
-                        View Protocol
-                    </a>
-                    <a href="/contact" class="px-8 py-4 border border-slate-300 dark:border-slate-700 font-bold uppercase tracking-widest hover:border-orange-500 hover:text-orange-500 transition-all">
-                        Start Audit
+                    <a href="#migration-process" class="btn btn-primary">
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -54,12 +51,12 @@
                                 <i class="ri-terminal-line text-orange-500"></i> migration.sh
                             </button>
                             
-                            <button onclick="switchTab('analytics')" id="tab-analytics" class="terminal-tab px-4 py-2 bg-transparent text-slate-500 text-xs flex items-center gap-2 border-r border-slate-700/30 hover:bg-[#161b22]/50 hover:text-slate-400 transition-colors whitespace-nowrap shrink-0">
-                                <i class="ri-bar-chart-grouped-line text-blue-500"></i> seo_analytics.json
+                            <button onclick="switchTab('data')" id="tab-data" class="terminal-tab px-4 py-2 bg-transparent text-slate-500 text-xs flex items-center gap-2 border-r border-slate-700/30 hover:bg-[#161b22]/50 hover:text-slate-400 transition-colors whitespace-nowrap shrink-0">
+                                <i class="ri-database-2-line text-blue-500"></i> schema_map.json
                             </button>
 
-                            <button onclick="switchTab('support')" id="tab-support" class="terminal-tab px-4 py-2 bg-transparent text-slate-500 text-xs flex items-center gap-2 border-r border-slate-700/30 hover:bg-[#161b22]/50 hover:text-slate-400 transition-colors whitespace-nowrap shrink-0">
-                                <i class="ri-customer-service-2-line text-green-500"></i> maintenance.sys
+                            <button onclick="switchTab('qa')" id="tab-qa" class="terminal-tab px-4 py-2 bg-transparent text-slate-500 text-xs flex items-center gap-2 border-r border-slate-700/30 hover:bg-[#161b22]/50 hover:text-slate-400 transition-colors whitespace-nowrap shrink-0">
+                                <i class="ri-shield-check-line text-green-500"></i> integrity_check.log
                             </button>
                         </div>
 
@@ -70,7 +67,7 @@
                         
                         <div class="bg-[#161b22] px-4 py-1.5 flex justify-between items-center text-[10px] border-t border-slate-700/50">
                             <div class="flex items-center gap-3 text-slate-400">
-                                <span class="flex items-center gap-1 text-orange-500 font-bold"><i class="ri-flash-light-fill"></i> ~2cube.agency</span>
+                                <span class="flex items-center gap-1 text-orange-500 font-bold"><i class="ri-flash-light-fill"></i> ~2cube.studio</span>
                             </div>
                             
                             <div class="flex items-center gap-2 px-2 py-0.5 rounded bg-[#0d1117] border border-slate-700">
@@ -114,35 +111,35 @@
     // DATA: Scripts for each tab
     const scripts = {
         migration: [
-            { text: "hs auth --account=PRO_PORTAL --mode=secure", color: "text-white", state: "AUTH_CHECK", dot: "bg-yellow-500" },
-            { text: "> Establishing handshake... [OK]", color: "text-slate-500", state: "CONNECTING", dot: "bg-yellow-500 animate-pulse" },
-            { text: "hs fetch --src=wordpress_db --dest=hubdb", color: "text-white", state: "FETCHING", dot: "bg-blue-500 animate-pulse" },
-            { text: "> Found 420 Posts, 12 Custom Types.", color: "text-slate-400", state: "MAPPING", dot: "bg-blue-500 animate-pulse" },
-            { text: "hs upload --module=custom_blog_layout", color: "text-white", state: "UPLOADING", dot: "bg-orange-500 animate-pulse" },
-            { text: "> Uploading assets/css/theme.css... [DONE]", color: "text-yellow-500", state: "UPLOADING", dot: "bg-orange-500 animate-pulse" },
-            { text: "> Deploying to Staging Environment...", color: "text-slate-300", state: "DEPLOYING", dot: "bg-purple-500 animate-pulse" },
-            { text: "> [SUCCESS] Migration Complete. No Errors.", color: "text-green-400 font-bold", state: "READY", dot: "bg-green-500" }
+            { text: "hs auth --account=CLIENT_PORTAL --mode=secure", color: "text-white", state: "AUTH_CHECK", dot: "bg-yellow-500" },
+            { text: "> Handshake established... [OK]", color: "text-slate-500", state: "CONNECTING", dot: "bg-yellow-500 animate-pulse" },
+            { text: "wp export --content=posts,pages,cpt --format=json", color: "text-white", state: "EXPORTING", dot: "bg-blue-500 animate-pulse" },
+            { text: "> Fetched 420 Posts, 15 Custom Post Types.", color: "text-slate-400", state: "PROCESSING", dot: "bg-blue-500 animate-pulse" },
+            { text: "hs import --dest=hubdb --map=schema_map.json", color: "text-white", state: "IMPORTING", dot: "bg-orange-500 animate-pulse" },
+            { text: "> Creating HubDB Tables... [DONE]", color: "text-yellow-500", state: "MAPPING", dot: "bg-orange-500 animate-pulse" },
+            { text: "> Uploading Assets (Images/PDFs)... [DONE]", color: "text-slate-300", state: "UPLOADING", dot: "bg-purple-500 animate-pulse" },
+            { text: "> [SUCCESS] Migration Complete. 0 Errors Found.", color: "text-green-400 font-bold", state: "READY", dot: "bg-green-500" }
         ],
-        analytics: [
-            { text: "GET /api/v1/google-search-console/status", color: "text-blue-400", state: "CONNECTING", dot: "bg-blue-500" },
-            { text: "{", color: "text-white", state: "READING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;"organic_traffic": "STABLE",', color: "text-green-400", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;"indexing_status": "100%_INDEXED",', color: "text-green-400", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;"core_web_vitals": {', color: "text-white", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;&nbsp;&nbsp;"LCP": "0.8s",', color: "text-yellow-400", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;&nbsp;&nbsp;"CLS": "0.00"', color: "text-yellow-400", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
-            { text: '&nbsp;&nbsp;}', color: "text-white", state: "ANALYZING", dot: "bg-green-500 animate-pulse" },
+        data: [
+            { text: "cat schema_map.json", color: "text-blue-400", state: "READING", dot: "bg-blue-500" },
+            { text: "{", color: "text-white", state: "PARSING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;"wp_post_title": "hubspot_name",', color: "text-green-400", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;"wp_meta_desc": "hubspot_meta_description",', color: "text-green-400", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;"acf_custom_field": {', color: "text-white", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;&nbsp;&nbsp;"type": "rich_text",', color: "text-yellow-400", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;&nbsp;&nbsp;"dest": "hubdb_column_4"', color: "text-yellow-400", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
+            { text: '&nbsp;&nbsp;}', color: "text-white", state: "MAPPING", dot: "bg-green-500 animate-pulse" },
             { text: "}", color: "text-white", state: "COMPLETE", dot: "bg-green-500" },
-            { text: "> SEO Integrity Verified.", color: "text-slate-400", state: "VERIFIED", dot: "bg-green-500" }
+            { text: "> Schema Validated.", color: "text-slate-400", state: "VERIFIED", dot: "bg-green-500" }
         ],
-        support: [
-            { text: "run system_check --daily", color: "text-white", state: "INIT_CHECK", dot: "bg-purple-500" },
-            { text: "> Checking SSL Certificate... [VALID]", color: "text-green-400", state: "SECURITY", dot: "bg-purple-500 animate-pulse" },
-            { text: "> 24/7 Uptime Monitor... [ACTIVE]", color: "text-green-400", state: "MONITORING", dot: "bg-purple-500 animate-pulse" },
-            { text: "> Daily Backup Verification... [OK]", color: "text-slate-400", state: "BACKUP", dot: "bg-purple-500 animate-pulse" },
-            { text: "> HubL Error Scan... [CLEAN]", color: "text-slate-400", state: "SCANNING", dot: "bg-purple-500 animate-pulse" },
-            { text: "echo 'Support Systems Operational'", color: "text-blue-400", state: "ONLINE", dot: "bg-green-500" },
-            { text: "> We've got your back. Forever.", color: "text-orange-500 font-bold italic", state: "SUPPORT", dot: "bg-orange-500" }
+        qa: [
+            { text: "run integrity_check.sh", color: "text-white", state: "INIT_CHECK", dot: "bg-purple-500" },
+            { text: "> Verifying URL Redirects (301)... [PASS]", color: "text-green-400", state: "SEO_CHECK", dot: "bg-purple-500 animate-pulse" },
+            { text: "> Checking Missing Images (404)... [0 FOUND]", color: "text-green-400", state: "MEDIA_CHECK", dot: "bg-purple-500 animate-pulse" },
+            { text: "> Validating Meta Tags... [PASS]", color: "text-slate-400", state: "META_CHECK", dot: "bg-purple-500 animate-pulse" },
+            { text: "> Testing Form Submissions... [OK]", color: "text-slate-400", state: "FORM_CHECK", dot: "bg-purple-500 animate-pulse" },
+            { text: "echo 'System Ready for Go-Live'", color: "text-blue-400", state: "ONLINE", dot: "bg-green-500" },
+            { text: "> Launch sequence initiated.", color: "text-orange-500 font-bold italic", state: "LAUNCH", dot: "bg-orange-500" }
         ]
     };
 
@@ -177,8 +174,8 @@
                 div.className = `mb-1.5 ${currentLineData.color}`;
                 div.id = `line-${lineIndex}`;
                 
-                if(currentLineData.text.startsWith('hs') || currentLineData.text.startsWith('run') || currentLineData.text.startsWith('GET')) {
-                     div.innerHTML = '<span class="text-orange-500 mr-2 font-bold">➜</span>';
+                if(currentLineData.text.startsWith('hs') || currentLineData.text.startsWith('wp') || currentLineData.text.startsWith('run') || currentLineData.text.startsWith('cat')) {
+                      div.innerHTML = '<span class="text-orange-500 mr-2 font-bold">➜</span>';
                 }
                 
                 terminalContent.appendChild(div);
