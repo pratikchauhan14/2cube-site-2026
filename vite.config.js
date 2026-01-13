@@ -75,6 +75,7 @@ export default defineConfig({
         roadmap: 'roadmap.html',
         'case-study': 'case-study.html',
         'case-study-inner': 'case-study-inner.html',
+        test: 'test.html',
       },
     }
   }
