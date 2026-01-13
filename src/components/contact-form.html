@@ -1,0 +1,82 @@
+<section id="contact-portal" class="relative py-8 md:py-20 lg:py-28 overflow-hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-gray-800 md:bg-transparent dark:md:bg-transparent">
+    
+    <div class="wrapper relative z-10">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="flex items-center justify-between mb-4 md:mb-16 border-b border-slate-200 dark:border-slate-800 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-[10px] font-bold tracking-[0.3em] text-orange-500 uppercase">Step_02 // Project_Gathering</span>
+                </div>
+                <div class="font-mono text-[9px] text-slate-400 uppercase hidden md:block">
+                    Encoding: UTF-8 | Status: Ready
+                </div>
+            </div>
+
+            <form action="#" class=" space-y-4 md:space-y-12">
+                
+                <div class="relative group">
+                    <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:gap-y-6">
+                        <span class="text-xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Hi, I am</span>
+                        <div class="relative min-w-[200px] flex-grow">
+                            <input type="text" required placeholder="Full Name"
+                                   class="peer w-full bg-transparent border-b border-slate-200 dark:border-slate-700 py-1 text-xl md:text-3xl font-black text-orange-500 placeholder:text-slate-200 dark:placeholder:text-slate-800 focus:outline-none focus:border-orange-500 transition-all">
+                        </div>
+                        <span class="text-xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">representing</span>
+                        <div class="relative min-w-[200px] flex-grow">
+                            <input type="text" required placeholder="Company"
+                                   class="w-full bg-transparent border-b border-slate-200 dark:border-slate-700 py-1 text-xl md:text-3xl font-black text-orange-500 placeholder:text-slate-200 dark:placeholder:text-slate-800 focus:outline-none focus:border-orange-500 transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-2 md:py-8 border-y border-slate-100 dark:border-slate-800/50">
+                    <p class="font-mono text-[10px] text-slate-400 uppercase tracking-widest mb-6">Select_Required_Protocol:</p>
+                    <div class="flex flex-wrap gap-3">
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" class="hidden peer" name="service" value="migration">
+                            <span class="px-5 py-2 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-500 peer-checked:bg-orange-500 peer-checked:text-white peer-checked:border-orange-500 transition-all block">HubSpot Migration</span>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" class="hidden peer" name="service" value="custom_dev" checked>
+                            <span class="px-5 py-2 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-500 peer-checked:bg-slate-900 dark:peer-checked:bg-white dark:peer-checked:text-slate-900 peer-checked:text-white transition-all block">Custom Dev</span>
+                        </label>
+                        <label class="cursor-pointer group">
+                            <input type="checkbox" class="hidden peer" name="service" value="shopify">
+                            <span class="px-5 py-2 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-500 peer-checked:bg-green-600 peer-checked:text-white peer-checked:border-green-600 transition-all block">Shopify Store</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-12">
+                    <div class="space-y-4">
+                        <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Uplink_Email</label>
+                        <input type="email" required placeholder="name@company.com" 
+                               class="w-full bg-transparent border-b border-slate-200 dark:border-slate-700 py-2 text-lg font-bold text-orange-500 focus:outline-none focus:border-orange-500 transition-all">
+                    </div>
+                    <div class="space-y-4">
+                        <label class="font-mono text-[10px] text-slate-400 uppercase tracking-widest font-bold">Brief_Payload</label>
+                        <input type="text" placeholder="Tell us about the project scope..." 
+                               class="w-full bg-transparent border-b border-slate-200 dark:border-slate-700 py-2 text-lg font-bold text-orange-500 focus:outline-none focus:border-orange-500 transition-all">
+                    </div>
+                </div>
+
+                <div class="pt-2 md:pt-12 flex flex-col md:flex-row items-center justify-between gap-10">
+                    <div class="flex-1 space-y-4 max-w-sm">
+                        <div class="flex justify-between font-mono text-[9px] text-slate-400 uppercase">
+                            <span>Security_Protocol</span>
+                            <span>AES_256</span>
+                        </div>
+                        <div class="h-[2px] w-full bg-slate-100 dark:bg-slate-800">
+                            <div class="h-full bg-orange-500 w-1/4 animate-pulse"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 leading-tight uppercase font-bold">Initializing direct handshake with engineering node...</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary px-12 py-5 text-sm tracking-[0.3em] group">
+                        Execute_Transmission <i class="ri-arrow-right-line ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
